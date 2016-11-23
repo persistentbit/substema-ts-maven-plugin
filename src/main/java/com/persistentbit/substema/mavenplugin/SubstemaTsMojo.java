@@ -34,16 +34,12 @@ import java.util.List;
 	defaultPhase = LifecyclePhase.GENERATE_SOURCES,
 	requiresDependencyResolution = ResolutionScope.COMPILE_PLUS_RUNTIME
 )
-public class SubstemaMojo extends AbstractMojo{
+public class SubstemaTsMojo extends AbstractMojo{
 
 	@Parameter(property = "project", required = true, readonly = true)
 	MavenProject project;
 
 
-	/*
-	 * @parameter default-value="target/generated-packages/rod"
-	 * @required
-	 */
 	@Parameter(defaultValue = "target/generated-sources/substema", required = true)
 	File outputDirectory;
 
