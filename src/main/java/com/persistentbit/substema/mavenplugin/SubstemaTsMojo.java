@@ -63,7 +63,7 @@ public class SubstemaTsMojo extends AbstractMojo{
 			//Compile the source
 			SubstemaCompiler compiler = new SubstemaCompiler(dependencySupplier);
 			PList<RSubstema> substemas = PList.from(packages)
-				.map(p -> compiler.compile(p));
+				.map(p -> compiler.compile(p).orElseThrow());
 
 			substemas.forEach(ss -> getLog().info(ss.toString()));
 
